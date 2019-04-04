@@ -4,12 +4,16 @@ exports.up = function(knex, Promise) {
     tbl.increments()
 
     tbl
-      .string('users', 255)
+      .string('username', 255)
       .notNullable()
       .unique()
 
     tbl
-      .string('password', 128)
+      .string('password', 255)
+      .notNullable()
+
+    tbl
+      .string('department', 255)
       .notNullable()
   })
 };

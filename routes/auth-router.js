@@ -12,7 +12,7 @@ router.post('/register', (req, res) => {
   user.password = hash
 
   db('users').insert(user).then(saved => {
-    res.status(200).json(saved)
+    res.status(201).json(saved)
   }).catch(err => {
     res.status(500).json(err)
   })
